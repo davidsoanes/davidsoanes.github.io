@@ -62,7 +62,6 @@ body {
 .header .logo {
   background-color: white;
   display: block;
-  float: center;
 }
 
 .header .logo img {
@@ -71,7 +70,7 @@ body {
   font-size: 1.7rem;
   text-align: right;
   float: right;
-  width: 20rem;
+  width: 17rem;
 }
 
 /* menu */
@@ -89,8 +88,8 @@ body {
 }
 
 .menu li {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .header li a {
@@ -227,13 +226,13 @@ h1 {
 
 .social-mobile {
   margin-left: auto;
-  padding-right: 1rem;
+  padding-right: 1.3rem;
 }
 
 .social-mobile a {
   text-decoration: none;
   color: black;
-  padding-left: 0.5rem;
+  padding-left: 0.8rem;
 }
 
 .social-mobile i {
