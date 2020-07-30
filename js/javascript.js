@@ -1,21 +1,31 @@
 //Disable image right click
-(function($){
-	$(document).on('contextmenu', 'img', function() {
-		return false;
-	})
-  })(jQuery);
+(function ($) {
+  $(document).on("contextmenu", "img", function () {
+    return false;
+  });
+})(jQuery);
 
+var client = {
+  init: function () {
+    var o = this;
 
+    // this will disable dragging of all images
+    $("img").mousedown(function (e) {
+      e.preventDefault();
+    });
 
+    // this will disable right-click on all images
+    $("body").on("contextmenu", function (e) {
+      return false;
+    });
+  },
+};
 
-lightbox.addEventListener('click', e => {
-	//remove this to make image box clickable to return
-	//if (e.target !== e.currentTarget) return
-	lightbox.classList.remove('active')
-})
-
-
-
+lightbox.addEventListener("click", (e) => {
+  //remove this to make image box clickable to return
+  //if (e.target !== e.currentTarget) return
+  lightbox.classList.remove("active");
+});
 
 //Back to top button
 
@@ -23,7 +33,9 @@ lightbox.addEventListener('click', e => {
 mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -37,38 +49,4 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-
-
-
-//Form Validation
-function form_validation()                                    
-{ 
-    var name = document.forms["RegForm"]["Name"];               
-    var email = document.forms["RegForm"]["EMail"];    
-    var what =  document.forms["RegForm"]["Subject"];  
-    var address = document.forms["RegForm"]["Message"];  
-   
-    if (name.value == "")                                  
-    { 
-        window.alert("Please enter your name."); 
-        name.focus(); 
-        return false; 
-    } 
-       
-    if (email.value == "")                                   
-    { 
-        window.alert("Please enter a valid e-mail address."); 
-        email.focus(); 
-        return false; 
-    } 
-
-    if (subject.value == "")                                   
-    { 
-        window.alert("Please enter a message."); 
-        email.focus(); 
-        return false; 
-    } 
-   
-    return true; 
 }
