@@ -47,6 +47,14 @@ body {
 .copyright p {
   padding-left: 1rem;
   font-size: 0.7rem;
+  font-size: 0.6rem;
+  align: bottom;
+}
+
+.copyright .copyright-text {
+  padding-left: 1rem;
+  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 /* new menu section */
@@ -70,10 +78,10 @@ body {
   font-size: 1.7rem;
   text-align: right;
   float: right;
-  width: 17rem;
+  width: 18rem;
 }
 /*Disable image right-click */
-img {
+.gallery img {
   pointer-events: none;
 }
 
@@ -112,6 +120,7 @@ img {
 }
 
 .header .menu-icon .navicon {
+  background-color: red;
   background: #333;
   display: block;
   top: 15px;
@@ -229,13 +238,13 @@ h1 {
 
 .social-mobile {
   margin-left: auto;
-  padding-right: 1.3rem;
+  margin-right: 1.3rem;
 }
 
 .social-mobile a {
   text-decoration: none;
   color: black;
-  padding-left: 0.8rem;
+  margin-left: 0.8rem;
 }
 
 .social-mobile i {
@@ -307,15 +316,6 @@ h1 {
 
   .social-mobile {
     display: none;
-  }
-
-  .header {
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    padding: 0;
-    padding-bottom: 0.5rem;
-    background: white;
-    display: inline-block;
-    width: 100%;
   }
 
   #about a {
@@ -428,6 +428,15 @@ h1 {
     height: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+
+  .header {
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 0;
+    padding-bottom: 0.5rem;
+    background: white;
+    display: inline-block;
+    width: 100%;
   }
 
   .header {
