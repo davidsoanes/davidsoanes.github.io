@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-82051316-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-82051316-1');
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>David Soanes Photography</title>
+    <title>Landscapes - David Soanes Photography</title>
+    <meta name="description" content="Landscape photography gallery." />
+
     <script src="https://use.fontawesome.com/af14fb55aa.js"></script>
     <script src="js/javascript.js"></script>
     <link rel="icon" type="image/png" href="images/favicon.ico">
 
 </head>
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up fa"></i></button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
       <header class="header">
         <input class="menu-btn" type="checkbox" id="menu-btn" />
         <label class="menu-icon" for="menu-btn">
@@ -39,25 +75,25 @@
     <section>
       <div class="gallery">
         <div class="container">
-          <img src="./images/landscapes/landscapes-25.jpg" alt="" />
+          <img src="./images/landscapes/landscapes-25.jpg" alt="landscape" />
 
-          <img src="./images/landscapes/landscapes-9.jpg" alt="" />
+          <img src="./images/landscapes/landscapes-9.jpg" alt="landscape" />
 
-          <img src="./images/landscapes/landscapes-1.jpg" alt="" />
+          <img src="./images/landscapes/landscapes-1.jpg" alt="landscape" />
 
-          <img src="./images/landscapes/landscapes-2.jpg" alt="" />
-          <img src="./images/landscapes/landscapes-3.jpg" alt="" />
-          <img src="./images/landscapes/landscapes-5.jpg" alt="" />
-          <img src="./images/landscapes/landscapes-8.jpg" alt="" />
+          <img src="./images/landscapes/landscapes-2.jpg" alt="landscape" />
+          <img src="./images/landscapes/landscapes-3.jpg" alt="landscape" />
+          <img src="./images/landscapes/landscapes-5.jpg" alt="landscape" />
+          <img src="./images/landscapes/landscapes-8.jpg" alt="landscape" />
 
-          <img src="./images/landscapes/landscapes-16.jpg" alt="" />
-          <img src="./images/landscapes/landscapes-20.jpg" alt="" />
-          <img src="./images/landscapes/landscapes-22.jpg" alt="" />
-          <img src="./images/landscapes/landscapes-23.jpg" alt="" />
-          <img src="./images/landscapes/landscapes-21.jpg" alt="" />
+          <img src="./images/landscapes/landscapes-16.jpg" alt="landscape" />
+          <img src="./images/landscapes/landscapes-20.jpg" alt="landscape" />
+          <img src="./images/landscapes/landscapes-22.jpg" alt="landscape" />
+          <img src="./images/landscapes/landscapes-23.jpg" alt="landscape" />
+          <img src="./images/landscapes/landscapes-21.jpg" alt="landscape" />
 
-          <img src="./images/landscapes/landscapes-24.jpg" alt="" />
-          <img src="./images/landscapes/landscapes-26.jpg" alt="" />
+          <img src="./images/landscapes/landscapes-24.jpg" alt="landscape" />
+          <img src="./images/landscapes/landscapes-26.jpg" alt="landscape" />
 
         </div>
       </div>
