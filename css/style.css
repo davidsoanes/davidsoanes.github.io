@@ -247,8 +247,24 @@ h1 {
   display: none;
 }
 
+#stock-links a {
+  display: block;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+/*Back to top button */
+#myBtn {
+  display: none;
+}
+
 /* Screen sizes 1024px and up */
 @media (min-width: 1024px) {
+  #stock-links a {
+    display: inline-block;
+    text-align: center;
+  }
+
   /*Back to top button */
   #myBtn {
     display: none;
@@ -301,6 +317,17 @@ h1 {
     background: white;
     display: inline-block;
     width: 100%;
+  }
+
+  #about a {
+    padding: 0;
+    margin: 0;
+  }
+
+  #stock-links {
+    margin: auto;
+    padding-top: 3rem;
+    text-align: center;
   }
 
   .header .menu {
@@ -400,7 +427,6 @@ h1 {
     max-width: 60rem;
     max-height: 40rem;
     height: auto;
-    background: grey;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
