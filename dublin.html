@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Dublin - David Soanes Photography</title>
     <meta name="description" content="Dublin photography gallery." />
-
     <script src="https://use.fontawesome.com/af14fb55aa.js"></script>
     <script src="js/javascript.js"></script>
     <link rel="icon" type="image/png" href="images/favicon.ico">
 
 </head>
-  <body>    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up fa"></i></button>
+  <body>   
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up fa"></i></button>
     <script>
       //Get the button
       var mybutton = document.getElementById("myBtn");
@@ -30,10 +31,16 @@
       window.onscroll = function() {scrollFunction()};
       
       function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 200) {
           mybutton.style.display = "block";
-        } else {
+
+          
+        }
+        
+         else {
+          
           mybutton.style.display = "none";
+
         }
       }
       
