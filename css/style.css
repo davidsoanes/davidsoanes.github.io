@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .html {
@@ -114,10 +115,10 @@ body {
   padding-left: 1rem;
   user-select: none;
   vertical-align: center;
+  outline: none !important;
 }
 
 .header .menu-icon .navicon {
-  background-color: red;
   background: #333;
   display: block;
   top: 15px;
