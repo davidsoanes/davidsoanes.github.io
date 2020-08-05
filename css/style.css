@@ -20,6 +20,10 @@ body {
   margin: auto;
 }
 
+#backToTop {
+  display: none;
+}
+
 /*Header styling*/
 .menu {
   padding-top: 1rem;
