@@ -21,7 +21,7 @@ body {
 }
 
 #backToTop {
-  display: none;
+  visibility: hidden;
 }
 
 /*Header styling*/
@@ -466,7 +466,8 @@ h1 {
   }
 
   .backToTop {
-    display: none;
+    visibility: visible;
+
     position: fixed;
     bottom: 57px;
     right: 50px;
