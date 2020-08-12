@@ -53,30 +53,61 @@
     <section>
       <div class="gallery">
         <div class="container">
-          <img src="./images/landscapes/landscapes-25.jpg" alt="landscape" />
+<br><br><br>
+<form>
+  <h3 id='title'>Click on the button to see some amazing effects</h3>
+  <button button type='button' id='daves-button' onclick="fancify()">Hi-tech Fancification</button>
+  <br><br>
+  <button button type='button' id='daves-revert-button' onclick="defancify()">Defancification</button>
 
-          <img src="./images/landscapes/landscapes-9.jpg" alt="landscape" />
+</form>
+<script>
+  document.getElementById("daves-revert-button").style.visibility = "hidden";
 
-          <img src="./images/landscapes/landscapes-1.jpg" alt="landscape" />
+function fancify () {
 
-          <img src="./images/landscapes/landscapes-2.jpg" alt="landscape" />
-          <img src="./images/landscapes/landscapes-3.jpg" alt="landscape" />
-          <img src="./images/landscapes/landscapes-5.jpg" alt="landscape" />
-          <img src="./images/landscapes/landscapes-8.jpg" alt="landscape" />
+  document.getElementById("title").setAttribute("style", "font-style: italic; color:#ff0000;");
+document.getElementById('title').innerHTML='H-tech fancification has been processed and now your text is changed! Well done!';
+document.getElementById('daves-button').innerHTML='Fancification complete. Congratulations.';
+document.getElementById("daves-revert-button").style.visibility = "visible";
+}
 
-          <img src="./images/landscapes/landscapes-16.jpg" alt="landscape" />
-          <img src="./images/landscapes/landscapes-20.jpg" alt="landscape" />
-          <img src="./images/landscapes/landscapes-22.jpg" alt="landscape" />
-          <img src="./images/landscapes/landscapes-23.jpg" alt="landscape" />
-          <img src="./images/landscapes/landscapes-21.jpg" alt="landscape" />
+function defancify () {
 
-          <img src="./images/landscapes/landscapes-24.jpg" alt="landscape" />
-          <img src="./images/landscapes/landscapes-26.jpg" alt="landscape" />
+document.getElementById("title").setAttribute("style", "font-style: regular; color:black;");
+document.getElementById('title').innerHTML='Defancification has been processed and now your text is changed! Well done!';
+document.getElementById('daves-button').innerHTML='Defancification complete. Congratulations.';
+document.getElementById('daves-button').innerHTML='Refancify';
+
+
+}
+
+</script>
+
+
+
+
+<!--
+          <form>
+            <h3>Enter your age and click on the calculator</h3>
+<input type = "text"><br></input><br>
+<button onclick="age-calculation()">Hi-tech Calculator</button>
+</form>
+<script>
+function age-calculation (
+  var age
+)
+
+</script>
+-->
+
+<h1></h1>
+
 
         </div>
       </div>
     </section>
-    <hr>
+    <br><br><br>
     <footer id="footer">
       <div class="container">
         <div class="copyright">
@@ -110,33 +141,6 @@
 
 
 
-<script>
-  jQuery(document).ready(function () {
-    //   insert back to top button dynamicly
-    $("#backToTop").append(
-      '<a class="backToTop" href="javascript:void(null);" style="display: none;"><i class="fa fa-angle-up"></i><iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe></a>'
-    );
-    var $window = $(window);
-    var distance = 80;
-    // scroll
-    $window.scroll(function () {
-      // header
-      if ($window.scrollTop() >= distance) {
-        $(".backToTop").fadeIn();
-      } else {
-        $(".backToTop").fadeOut();
-      }
-    });
 
-    $(".backToTop").click(function () {
-      $("html, body").animate(
-        {
-          scrollTop: 0,
-        },
-        800
-      );
-    });
-  });
-</script>
   </body>
 </html>
