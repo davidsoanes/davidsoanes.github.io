@@ -110,6 +110,18 @@
   </div>
 
 
+  <script>
+    //preload images
+    $.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
+// Usage:
+
+$(['./images/homepage-banner.jpg','./images/homepage-banner-2.jpg','./images/homepage-banner-3.jpg','./images/homepage-banner-mobile-1.jpg','./images/homepage-banner-mobile-2.jpg','./images/homepage-banner-mobile-3.jpg']).preload();
+  </script>
 
 <script>
 var images = [];
