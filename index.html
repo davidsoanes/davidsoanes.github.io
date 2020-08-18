@@ -142,13 +142,13 @@ imagesmob[0] = "./images/homepage-banner-mobile-2.jpg";
 imagesmob[1] = "./images/homepage-banner-mobile-3.jpg";
 
 var m = 0;
-setInterval(fadeDivs, 6000);
+setInterval(fadeDivs, 7000);
 
 function fadeDivs() {
     m = m < imagesmob.length ? m : 0;
     console.log(m)
-    $('.mobile-banner img').fadeOut(700, function(){
-        $(this).attr('src', imagesmob[m]).fadeIn(700);
+    $('.mobile-banner img').fadeOut(1000, function(){
+        $(this).attr('src', imagesmob[m]).fadeIn(1000);
         m++;
 
     })
