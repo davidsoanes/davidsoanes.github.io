@@ -67,7 +67,7 @@
       <div class="container">
         <section id="mobile-banner">
           <article class="mobile-banner">
-              <img src="./images/homepage-banner-mobile-1.jpg" />
+              <img src="./images/homepage-banner-mobile-3.jpg" />
           </article>
 
       </section>
@@ -110,6 +110,18 @@
   </div>
 
 
+  <script>
+    //preload images
+    $.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
+// Usage:
+
+$(['./images/homepage-banner.jpg','./images/homepage-banner-2.jpg','./images/homepage-banner-3.jpg','./images/homepage-banner-mobile-1.jpg','./images/homepage-banner-mobile-2.jpg','./images/homepage-banner-mobile-3.jpg']).preload();
+  </script>
 
 <script>
 var images = [];
@@ -137,18 +149,18 @@ function fadeDivs() {
 
 <script>
   var imagesmob = [];
-imagesmob[2] = "./images/homepage-banner-mobile-1.jpg";
-imagesmob[0] = "./images/homepage-banner-mobile-2.jpg";
-imagesmob[1] = "./images/homepage-banner-mobile-3.jpg";
+imagesmob[0] = "./images/homepage-banner-mobile-1.jpg";
+imagesmob[1] = "./images/homepage-banner-mobile-2.jpg";
+imagesmob[2] = "./images/homepage-banner-mobile-3.jpg";
 
 var m = 0;
-setInterval(fadeDivs, 6000);
+setInterval(fadeDivs, 7000);
 
 function fadeDivs() {
     m = m < imagesmob.length ? m : 0;
     console.log(m)
-    $('.mobile-banner img').fadeOut(700, function(){
-        $(this).attr('src', imagesmob[m]).fadeIn(700);
+    $('.mobile-banner img').fadeOut(1000, function(){
+        $(this).attr('src', imagesmob[m]).fadeIn(1000);
         m++;
 
     })

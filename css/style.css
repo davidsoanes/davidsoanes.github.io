@@ -43,6 +43,7 @@ body {
   height: 73vh;
   object-fit: cover;
   background-color: grey;
+  object-position: 10% -30%;
 }
 .copyright {
   margin-top: 1rem;
