@@ -58,26 +58,33 @@
   <h3 id='title'>Click on the button to see some amazing effects</h3>
   <button button type='button' id='daves-button' onclick="fancify()">Hi-tech Fancification</button>
   <br><br>
+  <h3 id='revert-text'>If you would like to change this back please click below</h3>
+
   <button button type='button' id='daves-revert-button' onclick="defancify()">Defancification</button>
 
 </form>
 <script>
   document.getElementById("daves-revert-button").style.visibility = "hidden";
+  document.getElementById("revert-text").style.visibility = "hidden";
 
 function fancify () {
 
   document.getElementById("title").setAttribute("style", "font-style: italic; color:#ff0000;");
-document.getElementById('title').innerHTML='H-tech fancification has been processed and now your text is changed! Well done!';
+document.getElementById('title').innerHTML='Hi-tech fancification has been processed and now your text is changed! Well done!';
 document.getElementById('daves-button').innerHTML='Fancification complete. Congratulations.';
+document.getElementById("revert-text").style.visibility = "visible";
+document.getElementById("daves-button").style.visibility = "hidden";
 document.getElementById("daves-revert-button").style.visibility = "visible";
 }
 
 function defancify () {
 
 document.getElementById("title").setAttribute("style", "font-style: regular; color:black;");
-document.getElementById('title').innerHTML='Defancification has been processed and now your text is changed! Well done!';
+document.getElementById('title').innerHTML='Click on the button to see some amazing effects';
 document.getElementById('daves-button').innerHTML='Defancification complete. Congratulations.';
 document.getElementById('daves-button').innerHTML='Refancify';
+document.getElementById("daves-button").style.visibility = "visible";
+
 
 
 }
@@ -85,21 +92,34 @@ document.getElementById('daves-button').innerHTML='Refancify';
 </script>
 
 
+<script>
+  for(i=1;i<10;i++)
+  {
+    //window.alert('Hello');
+  }
+</script>
 
 
-<!--
+
+
+
           <form>
             <h3>Enter your age and click on the calculator</h3>
-<input type = "text"><br></input><br>
-<button onclick="age-calculation()">Hi-tech Calculator</button>
+<input type = "text" id='currentAge'><br></input><br>
+<button onclick="ageCalculation()">Hi-tech Calculator</button>
 </form>
+
 <script>
-function age-calculation (
-  var age
-)
+function ageCalculation (){
+  var newAge=0;
+  var current = $('#currentAge').val();
+  var ageIncrease=10;
+  newAge = +current+ +ageIncrease;
+  window.alert('Your age in 10 years will be ' + newAge + ' and you should be very happy with this!');
+
+};
 
 </script>
--->
 
 <h1></h1>
 
