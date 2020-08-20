@@ -124,6 +124,18 @@ body {
   color: black;
 }
 
+.header li a:hover {
+  animation-name: buttonchange;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes buttonchange {
+  100% {
+    color: grey;
+  }
+}
+
 /* menu icon */
 .header .menu-icon {
   display: flex;
