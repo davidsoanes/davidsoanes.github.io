@@ -5,4 +5,4 @@ Photography Website
 - Fully responsive design
 - Features a homepage image transition using Javascript
 
-[(http://i.imgur.com/dt8AUb6.png)]()
+<a href="davidsoanes.com"><img src="https://www.dropbox.com/home/Codepen/Readme?preview=david-soanes-homepage.png?raw=1" title="DavidSoanes.com" alt="David Soanes photography website homepage"></a>
