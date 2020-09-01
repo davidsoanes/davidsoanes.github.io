@@ -6,3 +6,4 @@ Photography Website
 - Features a homepage image transition using Javascript
 
 <a href="davidsoanes.com"><img src="https://www.dropbox.com/s/2puf6ncailbfgva/david-soanes-homepage.png?raw=1" title="DavidSoanes.com" alt="David Soanes photography website homepage"></a>
+<img src="https://www.dropbox.com/s/2puf6ncailbfgva/david-soanes-homepage.png?dl=0">
