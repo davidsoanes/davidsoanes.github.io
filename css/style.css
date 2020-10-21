@@ -295,6 +295,57 @@ h1 {
 }
 
 /* Screen sizes 1024px and up */
+@media (min-width: 800px) {
+  .container {
+    width: 100%;
+  }
+
+  .mobile-banner {
+    display: none;
+  }
+  .desktop-banner {
+    margin: auto;
+    width: 100%;
+    display: block;
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+  }
+
+  .desktop-banner img {
+    margin: 0;
+    width: 100%;
+    background: #fff;
+    height: 88vh;
+    object-fit: cover;
+    object-position: 100% 25%;
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+  }
+
+  .gallery {
+    display: block;
+    text-align: center;
+  }
+
+  .gallery img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 60rem;
+    max-height: 40rem;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Screen sizes 1280px and up */
 @media (min-width: 1280px) {
   #stock-links a {
     display: inline-block;
