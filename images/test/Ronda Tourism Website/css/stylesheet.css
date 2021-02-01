@@ -54,16 +54,20 @@ body {
   /*font-family: Hoefler Text, Baskerville Old Face, Garamond, Times New Roman, serif; */
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
+  padding-top: 0rem;
+  height: auto;
 }
 
 .header .logo {
+  position: relative;
   font: italic normal normal 1.4rem "libre baskerville", serif;
   color: #94703a;
   font-size: 1.7rem;
   text-decoration: none;
-  text-align: right;
+  text-align: center;
   width: 20rem;
-  margin-top: 0.4rem;
+  margin-top: -0.3rem;
+  margin-left: 10rem;
 }
 
 .header .logo img {
@@ -219,8 +223,8 @@ body {
 .header .menu-icon .navicon {
   background: white;
   display: block;
-  top: 25px;
-  left: 20px;
+  top: 0.8rem;
+  left: 1.2rem;
   height: 3px;
   position: relative;
   width: 22px;
@@ -811,7 +815,14 @@ h4 {
   }
 
   .header .logo {
-    margin-right: 0rem;
+    font: italic normal normal 1.4rem "libre baskerville", serif;
+    color: #94703a;
+    text-align: right;
+    width: 15rem;
+    margin-top: 0.4rem;
+    margin-right: 4rem;
+    margin-left: 0rem;
+
     font-size: 2rem;
     padding-bottom: 2rem;
     text-decoration: none;
@@ -845,6 +856,12 @@ h4 {
   }
 
   .header .logo img {
+    font: italic normal normal 1.4rem "libre baskerville", serif;
+    color: #94703a;
+    font-size: 1.7rem;
+    text-decoration: none;
+    text-align: right;
+
     margin-right: 0;
     padding-left: 1rem;
     margin-right: 5rem;
