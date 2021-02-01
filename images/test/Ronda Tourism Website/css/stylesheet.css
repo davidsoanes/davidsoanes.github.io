@@ -7,16 +7,6 @@
   /* box-sizing: border-box;*/
 }
 
-.header_style_wrapper {
-  width: 100%;
-  float: left;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9;
-  display: block;
-}
-
 /* mobile first design */
 html {
   margin: 0;
@@ -64,8 +54,6 @@ body {
   /*font-family: Hoefler Text, Baskerville Old Face, Garamond, Times New Roman, serif; */
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
-  padding-bottom: 1.5rem;
-  padding-top: 1.5rem;
 }
 
 .header .logo {
@@ -73,7 +61,7 @@ body {
   color: #94703a;
   font-size: 1.7rem;
   text-decoration: none;
-  text-align: left;
+  text-align: right;
   width: 20rem;
   margin-top: 0.4rem;
 }
@@ -81,13 +69,133 @@ body {
 .header .logo img {
   width: 50%;
   margin-right: 5rem;
-  padding-left: 5rem;
+  padding-left: 7rem;
   font: italic normal normal 1.4rem "libre baskerville", serif;
   color: #94703a;
   font-size: 1.7rem;
   text-decoration: none;
   text-align: right;
   width: 23rem;
+}
+
+/* Inner menu */
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  display: block;
+}
+
+.header ul li {
+  display: block;
+}
+
+.header li {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.header li a {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  margin-left: 1.3rem;
+  margin-right: 1rem;
+  /*border-right: 1px solid #f4f4f4;*/
+  text-decoration: none;
+  color: white;
+}
+
+/* Dropdown Button from w3 */
+.dropbtn li a {
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  margin-left: 1.3rem;
+  margin-right: 1.3rem;
+  /*border-right: 1px solid #f4f4f4;*/
+  text-decoration: none;
+  color: white;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 0.7rem 0.7rem;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  text-decoration: none;
+  display: block;
+  background-color: #333;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  z-index: 100;
+  display: none;
+  position: relative;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 1.1rem 0rem 0rem 0rem;
+}
+
+.dropbtn {
+  width: 100vw;
+}
+
+.dropbtn {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: block;
+  z-index: 100;
+}
+
+/* Change color of dropdown links on hover 
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+*/
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header .language {
+  margin-left: 0rem;
+  margin-right: 0rem;
+  text-align: right;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  text-decoration: none;
+  position: absolute;
+  top: 1.4rem;
+  right: 1rem;
+}
+
+.header .instagram a {
+  display: block;
+  font-size: 3rem;
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  color: white;
 }
 
 /* menu */
@@ -100,7 +208,6 @@ body {
 
 /* menu icon */
 .header .menu-icon {
-  display: flex;
   cursor: pointer;
   text-align: left;
   padding-left: 1rem;
@@ -108,50 +215,21 @@ body {
   vertical-align: center;
 }
 
-/* Inner menu */
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow: hidden;
-}
-
-.header li a {
-  display: block;
-  text-align: left;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  /*border-right: 1px solid #f4f4f4;*/
-  text-decoration: none;
-  color: white;
-}
-
-.header .instagram a {
-  display: block;
-  text-align: left;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  /*border-right: 1px solid #f4f4f4;*/
-  text-decoration: none;
-  color: white;
-}
-
+/* Burger menu */
 .header .menu-icon .navicon {
-  background: #333;
+  background: white;
   display: block;
-  top: 20px;
-  height: 2px;
+  top: 25px;
+  left: 20px;
+  height: 3px;
   position: relative;
-  width: 18px;
+  width: 22px;
+  z-index: 1000;
 }
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-  background: #333;
+  background: white;
   content: "";
   display: block;
   height: 100%;
@@ -161,20 +239,19 @@ body {
 }
 
 .header .menu-icon .navicon:before {
-  top: 5px;
+  top: 6px;
 }
 
 .header .menu-icon .navicon:after {
-  top: -5px;
+  top: -6px;
 }
 
-/* menu btn */
 .header .menu-btn {
   display: none;
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 300px;
+  max-height: 100vh;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -380,12 +457,13 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 1.5rem;
+
+  margin-top: 0.6rem;
 }
 
 #footer-text p {
   margin: 0;
-  padding-top: 0.2rem;
+  padding-top: 0.8rem;
   color: white;
 }
 
@@ -558,34 +636,6 @@ body {
   object-fit: cover;
   height: 30%;
 }
-
-/* Style all social media icons 
-.fa {
-  padding: 0.5rem;
-  font-size: 3rem;
-  width: 2rem;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-.fa:hover {
-  opacity: 70%;
-}
-
-.fa-facebook {
-  background: #0062a0;
-  color: white;
-}
-
-.fa-envelope {
-  background: #0062a0;
-  color: white;
-}
-
-.fa-instagram {
-  background: #0062a0;
-  color: white;
-}*/
 
 /* Global Headings styling */
 h1 {
@@ -767,7 +817,7 @@ h4 {
     text-decoration: none;
   }
 
-  .header .instagram {
+  .header .instagram a {
     margin-left: 0rem;
     margin-right: 0rem;
     text-align: right;
@@ -777,6 +827,9 @@ h4 {
     position: absolute;
     top: 0.55rem;
     right: 6rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
   }
 
   .header .language {
@@ -812,6 +865,19 @@ h4 {
     margin-bottom: 0;
     margin-top: 0.2rem;
     font-weight: 400;
+  }
+
+  .header li a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    /*border-right: 1px solid #f4f4f4;*/
+    text-decoration: none;
+    color: white;
   }
 
   .header li a .i {
@@ -912,55 +978,62 @@ h4 {
     font-weight: 100;
     font-size: 0.9rem;
   }
-}
 
-/* Dropdown Button from w3 */
-.dropbtn {
-  background-color: #333;
-  color: white;
-  border: none;
-}
+  /* Dropdown Button from w3 */
+  .dropbtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    width: 100%;
+  }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  z-index: 100;
-}
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 100;
+  }
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  z-index: 100;
-  display: none;
-  position: relative;
-  background-color: #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 1.1rem 0rem 0rem 0rem;
-}
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    z-index: 100;
+    display: none;
+    position: relative;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 1.1rem 0rem 0rem 0rem;
+  }
 
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: white;
-  padding: 0.7rem 0.7rem;
-  text-decoration: none;
-  display: block;
-  background-color: #333;
-}
+  /* Dropdown Button from w3 */
+  .dropbtn li a {
+    text-align: left;
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    /*border-right: 1px solid #f4f4f4;*/
+    text-decoration: none;
+    color: white;
+  }
 
-/* Change color of dropdown links on hover 
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-*/
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: white;
+    padding: 0.7rem 0.7rem;
+    font-size: 1rem;
+    margin-left: 0rem;
+    text-decoration: none;
+    display: block;
+    background-color: #333;
+  }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-/* Change the background color of the dropdown button when the dropdown content is shown 
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  .mobile-drop-icon {
+    display: none;
+  }
 }
-*/
