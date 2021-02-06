@@ -1,52 +1,92 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/stylesheet.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/lightbox.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="js/lightbox-plus-jquery.min.js"></script>
-    <script
-      type="text/javascript"
-      src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
-    ></script>
-    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-    <script type="text/javascript" src="js/javascript.js"></script>
-    <meta name="viewport" content="width=device-width" />
-    <title>My Story - Each Journey Matters</title>
-    <meta name="description" content="A variety of services that I offer" />
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/stylesheet.css">
+  <!--    <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/lightbox.min.css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/png" href="images/icon.png">
+        <script src="js/lightbox-plus-jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <script type="text/javascript" src="js/javascript.js"></script>
+        <meta name="viewport" content="width=device-width">
+        <script src="https://use.fontawesome.com/af14fb55aa.js"></script>
+
+        <title>Discover Ronda</title>
+        <meta name="description" content="Discover Ronda - A place to discover Ronda.">
   </head>
 
-  <body>
-    <!--new header-->
-    <div class="container">
-      <header class="header">
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"
-          ><span class="navicon"></span
-        ></label>
-        <a href="index.html" class="logo"><img src="./images/logo.jpg" /></a>
+ <!--  <script>
+        if (screen.width <= 1024)
 
-        <ul class="menu">
-          <li><a href="about.html">About Ronda</a></li>
-          <li><a href="blog-main.html">See & Do</a></li>
-          <li><a href="ronda.html">Gallery</a></li>
-          <li><a href="b-and-b.html">Insider Tips</a></li>
-          <li><a href="services-i-offer.html">Getting to Ronda</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
-          <li>
-              <a href="https://www.facebook.com/margaret.wu.9081" target="_blank" i class="fa fa-instagram " aria-hidden="true"></a>
-              <a href="https://www.instagram.com/eachjourneymatters/" target="_blank" i class="fa fa-facebook-square " aria-hidden="true"></a>
-              <a href="mailto:malgorzata.wielogorska@gmail.com"   class="fa fa-envelope " aria-hidden="true"></a>
-          </li>
-  
-      </ul>
-    </header>
-  </div>
+        function toggleMenu() {
+  var x = document.getElementById("menu-dropdown-submenu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+   </script>-->
+
+<!--new header-->
+
+<div class = "container">
+    <header class="header">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn">
+        <span class="navicon"></span>
+      </label>
+      <!--<a href="index.html" class="logo"><img src="./images/logo.jpg">Discover Ronda</a>-->
+      <ul class="menu"> 
+        <div class="menu-dropdown">
+            <div>
+            <li><a>About Ronda<span class="mobile-drop-icon"> ▾</span></a></li>
+            <div  id="menu-dropdown-submenu">  
+                <a href="history.html">History</a>
+                <a href="ronda-today.html">Ronda Today</a>
+                <a href="famous-people.html">Famous People</a>
+                <a href="regional-food.html">Regional Food</a>
+            </div>
+        </div>
+    </div>
+    
+        <div class="menu-dropdown">
+<li onclick="toggleMenu()"><a>See & Do<span class="mobile-drop-icon"> ▾</span></a></li>
+            <div id="menu-dropdown-submenu">  
+                <a href="sightseeing.html">Sightseeing</a>
+              <a href="culture.html">Culture/Museums</a>
+              <a href="hiking.html">Nature/Hiking</a>
+            </div>
+          </div>
+        <div class="menu-dropdown">
+       <li onclick="toggleMenu()"><a>Image Gallery<span class="mobile-drop-icon"> ▾</span></a></li>    
+       <div  id="menu-dropdown-submenu">  
+        <a href="ronda-gallery.html">Ronda</a>
+              <a href="serrania-gallery.html">Serrania</a>
+              <a href="andalucia-gallery.html">Andalucía</a>
+            </div>
+          </div>
+          <div class="menu-dropdown">
+            <li><a href="plan-your-trip.html">Plan Your Trip</a></li>
+          </div>
+          <div class="menu-dropdown">
+            <li onclick="toggleMenu()"><a>About Us<span class="mobile-drop-icon"> ▾</span></a></li>
+            <div  id="menu-dropdown-submenu">  
+                <a href="who-we-are.html">Who We Are</a>
+              <a href="support-us.html">Support Us</a>
+            </div>
+          </div>
+          <div class="instagram">
+            <a href="https://www.instagram.com/discover.ronda/" target="_blank" i class="fa fa-instagram " aria-hidden="true"></a>
+            </div>
+        </ul>
+<div class="language">
+        <a href="es/index.html" target="" i class="" aria-hidden="true"><img src="images/spanish-language.png" width="25rem"></a>
+        </div>
+  </header>
+</div>
 
   <section id="image-1-box">
     <div class="container">

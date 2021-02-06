@@ -1,0 +1,219 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/stylesheet.css">
+  <!--    <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/lightbox.min.css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/png" href="images/icon.png">
+        <script src="js/lightbox-plus-jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <script type="text/javascript" src="js/javascript.js"></script>
+        <meta name="viewport" content="width=device-width">
+        <script src="https://use.fontawesome.com/af14fb55aa.js"></script>
+
+        <title>Discover Ronda</title>
+        <meta name="description" content="Discover Ronda - A place to discover Ronda.">
+  </head>
+
+ <!--  <script>
+        if (screen.width <= 1024)
+
+        function toggleMenu() {
+  var x = document.getElementById("menu-dropdown-submenu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+   </script>-->
+
+<!--new header-->
+
+<div class = "container">
+    <header class="header">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn">
+        <span class="navicon"></span>
+      </label>
+      <!--<a href="index.html" class="logo"><img src="./images/logo.jpg">Discover Ronda</a>-->
+      <ul class="menu"> 
+        <div class="menu-dropdown">
+            <div>
+            <li><a>About Ronda<span class="mobile-drop-icon"> ▾</span></a></li>
+            <div  id="menu-dropdown-submenu">  
+                <a href="history.html">History</a>
+                <a href="ronda-today.html">Ronda Today</a>
+                <a href="famous-people.html">Famous People</a>
+                <a href="regional-food.html">Regional Food</a>
+            </div>
+        </div>
+    </div>
+    
+        <div class="menu-dropdown">
+<li onclick="toggleMenu()"><a>See & Do<span class="mobile-drop-icon"> ▾</span></a></li>
+            <div id="menu-dropdown-submenu">  
+                <a href="sightseeing.html">Sightseeing</a>
+              <a href="culture.html">Culture/Museums</a>
+              <a href="hiking.html">Nature/Hiking</a>
+            </div>
+          </div>
+        <div class="menu-dropdown">
+       <li onclick="toggleMenu()"><a>Image Gallery<span class="mobile-drop-icon"> ▾</span></a></li>    
+       <div  id="menu-dropdown-submenu">  
+        <a href="ronda-gallery.html">Ronda</a>
+              <a href="serrania-gallery.html">Serrania</a>
+              <a href="andalucia-gallery.html">Andalucía</a>
+            </div>
+          </div>
+          <div class="menu-dropdown">
+            <li><a href="plan-your-trip.html">Plan Your Trip</a></li>
+          </div>
+          <div class="menu-dropdown">
+            <li onclick="toggleMenu()"><a>About Us<span class="mobile-drop-icon"> ▾</span></a></li>
+            <div  id="menu-dropdown-submenu">  
+                <a href="who-we-are.html">Who We Are</a>
+              <a href="support-us.html">Support Us</a>
+            </div>
+          </div>
+          <div class="instagram">
+            <a href="https://www.instagram.com/discover.ronda/" target="_blank" i class="fa fa-instagram " aria-hidden="true"></a>
+            </div>
+        </ul>
+<div class="language">
+        <a href="es/index.html" target="" i class="" aria-hidden="true"><img src="images/spanish-language.png" width="25rem"></a>
+        </div>
+  </header>
+</div>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  .feature-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width:85%;
+    margin: 0 auto;
+    margin-top:2rem;
+  }
+  
+  .feature-item-left {
+    background: black;
+    flex: 33%;
+    margin:1rem;
+    position:relative;
+ overflow: hidden;      
+
+
+  }
+
+  .feature-item-center {
+    background: black;
+    flex: 33%;
+    position:relative;
+    margin:1rem; 
+    overflow: hidden;      
+
+  }
+
+  .feature-item-right {
+    background: black;
+    flex: 33%;
+    position:relative;
+    margin:1rem;
+    overflow: hidden;      
+
+
+  }
+
+.feature-container img {
+  width:100%;
+ object-fit: cover;
+ transition: 0.7s;
+   filter: brightness(80%); 
+   height:20rem;
+}
+
+.centered-text {
+  position: absolute;
+  width:80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:white;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /*font: 1rem "Lato", sans-serif;*/
+  font-family: Georgia,"Times New Roman",Times,serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2em;
+  
+}
+
+.feature-container hr {
+  width: 10%;
+  height: 2px;
+  border-width: 0;
+  color: #333;
+  background-color: white;
+  opacity: 80%;
+}
+
+  .feature-item-left:hover img {
+    
+   /* filter: brightness(120%); */
+    transform: scale(1.07);
+    transform-origin: 50% 50%;
+
+  }
+
+  .feature-item-center:hover img {
+    
+    /* filter: brightness(120%); */
+     transform: scale(1.07);
+     transform-origin: 50% 50%;
+ 
+   }
+
+   .feature-item-right:hover img {
+    
+    /* filter: brightness(120%); */
+     transform: scale(1.07);
+     transform-origin: 50% 50%;
+ 
+   }
+
+
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 800px) {
+    .feature-container {
+      flex-direction: column;
+    }
+  }
+  </style>
+
+
+
+  </head>
+  <body>
+  
+
+
+
+
+    <div id = "footer">
+      <div id="footer-text">
+          <p>Copyright &copy 2021 David Soanes<br>
+      </div>
+  </div>
+  
+  </body>
+  </html>
