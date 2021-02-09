@@ -88,7 +88,7 @@
   </header>
 </div>
 
-
+<!--
     <section id = "homepage-banner">
         <div class = "container">
             <div class = "box">
@@ -99,6 +99,43 @@
             </div>
         </div>
     </section>
+-->
+
+    <section id = "homepage-banner">
+        <div class="container">
+          <section id="desktop-banner">
+            <article class="desktop-banner">
+                <img src="./images/homepage-banner.jpg" />
+            </article>
+  
+        </section>
+        </div>
+      </section>
+  
+      <section id = "homepage-banner">
+        <div class="container">
+          <section id="mobile-banner">
+            <article class="mobile-banner">
+                <img src="./images/homepage-banner-mobile-3.jpg" />
+            </article>
+  
+        </section>
+        </div>
+      </section>
+  
+
+      <div class="parallax-text-container-white">
+        <h3>Top Picks</h3>
+    </div>
+    
+    <div class="feature-container">
+        <div class="feature-item-left"><img src="./images/ronda/ronda_21.jpg"><div class="centered-text">Best Viewpoints in Ronda<hr></div></div>
+        <div class="feature-item-center"><img src="./images/ronda/ronda_3.jpg"><div class="centered-text">1-Day Itinerary<hr></div></div>
+        <div class="feature-item-right"><img src="./images/ronda/ronda_1.jpg"><div class="centered-text">Weekend Trip<hr></div></div>
+      </div>
+
+
+
     <div class = "container">
         <div id = "blog-text-box">
             <h3>Top Picks</h3>
@@ -138,21 +175,77 @@
                     <p>See all blog posts <a href="blog-main.html">here.</a></p>
                 </div>
             </div>
-<!--
-    <section id = "homepage-quote">
-        <div class = "container">
-            <div class = "box">
-                <h3>"Make earth a house and humanity, a man. So whoever comes will always be welcome"</h3>
-                <h3> - Ibn Saraf, s. XI</h3>
-            </div>
-        </div>
-    </section>-->
+
+            <div id = "quote">
+<h3>"Make earth a house and humanity, a man. So whoever comes will always be welcome"</h3><hr>
+                <h4>Ibn Saraf, s. XI</h4>
+              </div>
+
 
 <div id = "footer">
     <div id="footer-text">
         <p>Copyright &copy 2021 David Soanes<br>
     </div>
 </div>
+
+
+<script> // script for rotating banner images
+    //preload images
+    $.fn.preload = function() {
+    this.each(function(){
+        $('<img/>')[0].src = this;
+    });
+}
+
+// Usage:
+
+$(['./images/homepage-banner.jpg','./images/homepage-banner-2.jpg','./images/homepage-banner-3.jpg','./images/homepage-banner-mobile-1.jpg','./images/homepage-banner-mobile-2.jpg','./images/homepage-banner-mobile-3.jpg']).preload();
+  </script>
+
+<script>
+var images = [];
+images[2] = "./images/homepage-banner.jpg";
+images[0] = "./images/homepage-banner-2.jpg";
+images[1] = "./images/homepage-banner-3.jpg";
+
+
+
+
+var i = 0;
+setInterval(fadeDivs, 6000);
+
+function fadeDivs() {
+    i = i < images.length ? i : 0;
+    console.log(i)
+    $('.desktop-banner img').fadeOut(700, function(){
+        $(this).attr('src', images[i]).fadeIn(700);
+        i++;
+
+    })
+
+}
+</script>
+
+<script>
+  var imagesmob = [];
+imagesmob[0] = "./images/homepage-banner-mobile-1.jpg";
+imagesmob[1] = "./images/homepage-banner-mobile-2.jpg";
+imagesmob[2] = "./images/homepage-banner-mobile-3.jpg";
+
+var m = 0;
+setInterval(fadeDivs, 7000);
+
+function fadeDivs() {
+    m = m < imagesmob.length ? m : 0;
+    console.log(m)
+    $('.mobile-banner img').fadeOut(1000, function(){
+        $(this).attr('src', imagesmob[m]).fadeIn(1000);
+        m++;
+
+    })
+
+}
+</script>
 
 </body>
 </html>
