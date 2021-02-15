@@ -722,16 +722,6 @@ h3 {
   color: black;
 }
 
-h4 {
-  padding-top: 0.3rem;
-  margin-bottom: 0rem;
-  text-align: center;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font: 0.7rem "Lato", sans-serif;
-  color: #111;
-}
-
 .figcaption {
   clear: both;
   font-size: 0.9rem;
@@ -830,10 +820,20 @@ h4 {
 }
 
 .homepage-flex-item-left {
-  padding-top: 1rem;
+  padding-top: 0rem;
   flex: 40%;
   text-align: justify;
   font: 1rem "Lato", sans-serif;
+}
+
+.homepage-flex-item-left h4 {
+  padding-top: 0.3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font: 0.7rem "Lato", sans-serif;
+  color: #111;
 }
 
 .homepage-flex-item-right {
@@ -901,6 +901,7 @@ html {
 .homepage-parallax-banner-1,
 .homepage-parallax-banner-2,
 .homepage-parallax-banner-3 {
+  display: flex;
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -917,6 +918,10 @@ html {
   filter: brightness(100%) !important;
   z-index: 999;
   color: blue;
+}
+
+.homepage-flex-container p {
+  margin: 0;
 }
 
 .centered-text-header {
@@ -1183,6 +1188,31 @@ html {
   background: transparent;
   text-decoration: none;
   color: white !important;
+}
+
+.feature-read-more {
+  padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /*font: 1rem "Lato", sans-serif;*/
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 0.5rem;
+  line-height: 1.2em;
+  letter-spacing: 0rem;
+  background: black;
+  width: 3.5rem;
+  margin: 0 auto;
+  border: 2px solid black !important; /*inline style is given more preference so need to use important here */
+  margin-bottom: 2rem;
+  margin-top: -1.5rem;
+}
+
+.feature-read-more a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .feature-container-large hr {
@@ -1860,6 +1890,43 @@ html {
     margin-bottom: 1rem;
   }
 
+  .homepage-flex-item-left {
+    padding-top: 2rem;
+    flex: 40%;
+    text-align: left;
+    font: 1rem "Lato", sans-serif;
+  }
+
+  .homepage-flex-item-right {
+    flex: 50%;
+    margin-top: 1rem;
+    text-align: justify;
+    margin: 0 auto;
+    font: 1.3rem "Lato", sans-serif;
+  }
+
+  .homepage-flex-item-right h3 {
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 1rem "Lato", sans-serif;
+    color: #111;
+  }
+
+  .homepage-flex-item-right img {
+    width: 100%;
+    height: auto; /* constrains image within the flexbox container */
+  }
+
+  .homepage-flex-item-left img {
+    width: 100%;
+    height: auto; /* constrains image within the flexbox container */
+  }
+
+  .homepage-flex-item-left p {
+    padding-top: 0rem;
+  }
+
   /*Large feature container styling */
 
   .centered-text-large {
@@ -1922,5 +1989,17 @@ html {
 
   .homepage-parallax-banner-1 {
     min-height: 80%;
+  }
+
+  .feature-read-more {
+    font-size: 0.8rem;
+    width: 20%;
+  }
+
+  .feature-read-more:hover {
+    border: 2px solid black !important; /*inline style is given more preference so need to use important here */
+    background: transparent;
+    text-decoration: none;
+    color: black !important;
   }
 }
