@@ -723,12 +723,13 @@ h3 {
 }
 
 h4 {
-  font-weight: 400;
-  font-size: 1rem;
-  text-transform: capitalize;
-  margin: 0;
-  color: black;
-  /*color: #0062a0;*/
+  padding-top: 0.3rem;
+  margin-bottom: 0rem;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font: 0.7rem "Lato", sans-serif;
+  color: #111;
 }
 
 .figcaption {
@@ -808,11 +809,56 @@ h4 {
 }
 
 .flex-item-right img {
-  width: 100%;
+  width: 90%;
   height: auto; /* constrains image within the flexbox container */
 }
 
 .flex-item-left img {
+  width: 90%;
+  height: auto; /* constrains image within the flexbox container */
+}
+
+/* Homepage flex-container */
+
+.homepage-flex-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 95%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.homepage-flex-item-left {
+  padding-top: 1rem;
+  flex: 40%;
+  text-align: justify;
+  font: 1rem "Lato", sans-serif;
+}
+
+.homepage-flex-item-right {
+  flex: 50%;
+  margin-top: 1rem;
+  text-align: justify;
+  margin: 0 auto;
+  font: 1.3rem "Lato", sans-serif;
+}
+
+.homepage-flex-item-right h3 {
+  text-align: center;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 1rem "Lato", sans-serif;
+  color: #111;
+}
+
+.homepage-flex-item-right img {
+  width: 100%;
+
+  height: auto; /* constrains image within the flexbox container */
+}
+
+.homepage-flex-item-left img {
   width: 100%;
   height: auto; /* constrains image within the flexbox container */
 }
@@ -850,6 +896,58 @@ html {
 .bgimg-3 {
   background-image: url("../images/ronda/ronda_3.jpg");
   min-height: 400px;
+}
+
+.homepage-parallax-banner-1,
+.homepage-parallax-banner-2,
+.homepage-parallax-banner-3 {
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homepage-parallax-banner-1 {
+  background-image: url("../images/ronda/ronda_18.jpg");
+  min-height: 60%;
+  filter: brightness(70%);
+}
+
+.homepage-parallax-banner-1 .centered-text-large {
+  filter: brightness(100%) !important;
+  z-index: 999;
+  color: blue;
+}
+
+.centered-text-header {
+  z-index: 100;
+}
+
+.centered-text-large {
+  z-index: 100;
+}
+
+.read-more {
+  z-index: 100;
+}
+
+.centered-text-large hr {
+  width: 10%;
+  height: 2px;
+  border-width: 0;
+  color: #333;
+  background-color: white;
+  opacity: 80%;
+}
+
+.homepage-parallax-banner-2 {
+  background-image: url("../images/ronda/ronda_5.jpg");
+  min-height: 80%;
+}
+
+.homepage-parallax-banner-3 {
+  background-image: url("../images/ronda/ronda_5.jpg");
+  min-height: 80%;
 }
 
 .caption {
@@ -989,6 +1087,105 @@ html {
 }
 
 .feature-container hr {
+  width: 10%;
+  height: 2px;
+  border-width: 0;
+  color: #333;
+  background-color: white;
+  opacity: 80%;
+}
+
+/*Large feature container styling */
+.feature-container-large {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100rem;
+  margin: 0 auto;
+  padding: 2rem 0 2rem 0;
+}
+
+.feature-container-large img {
+  width: 100%;
+  object-fit: cover;
+  transition: 0.7s;
+  filter: brightness(80%);
+  height: 13rem;
+}
+
+.feature-item-large {
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.centered-text-large {
+  position: absolute;
+  width: 80%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /*font: 1rem "Lato", sans-serif;*/
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2em;
+}
+
+.centered-text-header {
+  position: absolute;
+  width: 80%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /*font: 1rem "Lato", sans-serif;*/
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 0.5rem;
+  line-height: 1.2em;
+}
+
+.read-more {
+  position: absolute;
+  padding: 0.4rem 0.5rem 0.4rem 0.5rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  /*font: 1rem "Lato", sans-serif;*/
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 0.4rem;
+  line-height: 1.2em;
+  letter-spacing: 0rem;
+  background: white;
+}
+
+.read-more a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.read-more:hover {
+  border: 2px solid white !important; /*inline style is given more preference so need to use important here */
+  background: transparent;
+  text-decoration: none;
+  color: white !important;
+}
+
+.feature-container-large hr {
   width: 10%;
   height: 2px;
   border-width: 0;
@@ -1514,6 +1711,31 @@ html {
     color: #111;
   }
 
+  #read-more {
+    background-color: grey;
+    text-decoration: none;
+    border: none;
+    font: 1rem "Lato", sans-serif;
+  }
+
+  h2 {
+    padding-top: 2rem;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font: 2rem "Lato", sans-serif;
+    color: #111;
+  }
+
+  h4 {
+    padding-top: 2rem;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font: 1rem "Lato", sans-serif;
+    color: #111;
+  }
+
   .parallax-text-container-grey h3 {
     text-align: center;
     letter-spacing: 5px;
@@ -1538,6 +1760,16 @@ html {
 
   .feature-container img {
     height: 20rem;
+  }
+
+  .feature-container-large {
+    width: 100%;
+    height: 500vh;
+  }
+
+  .feature-container-large img {
+    height: 40rem;
+    width: 100%;
   }
 
   .mobile-banner {
@@ -1613,5 +1845,82 @@ html {
 
   .portfolio-container {
     margin-top: 0.3rem;
+  }
+
+  .feature-container-large {
+    height: 40rem;
+  }
+
+  .homepage-flex-container {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+
+  /*Large feature container styling */
+
+  .centered-text-large {
+    position: absolute;
+    width: 80%;
+    top: 40%;
+    left: 50%;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.2em;
+  }
+
+  .centered-text-header {
+    position: absolute;
+    width: 80%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /*font: 1rem "Lato", sans-serif;*/
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.2em;
+  }
+
+  .read-more {
+    position: absolute;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /*font: 1rem "Lato", sans-serif;*/
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.2em;
+    letter-spacing: 0rem;
+    background: white;
+  }
+
+  .read-more a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .read-more:hover {
+    border: 2px solid white !important; /*inline style is given more preference so need to use important here */
+    background: transparent;
+    text-decoration: none;
+    color: white !important;
+  }
+
+  .homepage-parallax-banner-1 {
+    min-height: 80%;
   }
 }
