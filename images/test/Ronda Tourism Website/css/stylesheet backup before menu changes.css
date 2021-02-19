@@ -30,10 +30,6 @@ body {
   transition: all 1s ease;
 }
 
-a:hover {
-  cursor: pointer !important;
-}
-
 .portfolio-container {
   margin-top: 0.3rem;
 }
@@ -53,17 +49,14 @@ a:hover {
 
 /* Header styling */
 .header {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 0.7rem;
   background: #333;
   /*font-family: Hoefler Text, Baskerville Old Face, Garamond, Times New Roman, serif; */
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   width: 100%;
+  padding-top: 0rem;
   height: auto;
-  /* padding-bottom: 5vh;*/
+  padding-bottom: 5vh;
   z-index: 999;
-  padding-bottom: 2rem;
 }
 
 .header .logo {
@@ -89,8 +82,6 @@ a:hover {
   width: 23rem;
 }
 */
-
-/*
 .header .language {
   margin-left: 0rem;
   margin-right: 0rem;
@@ -101,9 +92,8 @@ a:hover {
   position: absolute;
   top: 1.4rem;
   right: 1rem;
-}*/
+}
 
-/*
 .header .instagram a {
   display: block;
   font-size: 3rem;
@@ -115,18 +105,15 @@ a:hover {
   margin-right: 1rem;
   text-decoration: none;
   color: white;
-}*/
+}
 
 /* Inner menu */
 .header ul {
-  padding-bottom: 1.2rem;
-  padding-top: 1.2rem;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
   list-style: none;
   overflow: hidden;
   display: block;
-  background-color: green;
-  text-align: left;
 }
 
 .header ul li {
@@ -136,30 +123,35 @@ a:hover {
 .header li {
   font-size: 1.5rem;
   text-align: left;
-  background-color: blue;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 .header li a {
   display: block;
   width: 100%;
   text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  margin-left: 1.3rem;
+  margin-right: 1rem;
+  /*border-right: 1px solid #f4f4f4;*/
   text-decoration: none;
   color: white;
-  background-color: red;
 }
 
 /* Dropdown Menu */
+
 /* Links inside the dropdown */
 #menu-dropdown-submenu a {
-  padding-left: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-top: 1px solid #434343;
+  padding: 0.7rem 0.7rem;
   font-size: 1.2rem;
   text-decoration: none;
   display: block;
-  background-color: pink;
-
+  background-color: #333;
+  margin-bottom: 0;
+  margin-right: 1.3rem;
+  margin-left: 1.3rem;
   /*border-right: 1px solid #f4f4f4;*/
   text-decoration: none;
   color: white;
@@ -188,7 +180,9 @@ a:hover {
 
 /* The container <div> - needed to position the dropdown content */
 .menu-dropdown {
+  position: relative;
   display: block;
+  z-index: 100;
 }
 
 /* Change color of dropdown links on hover 
@@ -210,7 +204,8 @@ a:hover {
 
 /* menu */
 .header .menu {
-  display: none;
+  clear: both;
+  max-height: 0;
 }
 
 /* menu icon */
@@ -226,7 +221,7 @@ a:hover {
 .header .menu-icon .navicon {
   background: white;
   display: block;
-  top: 0.8rem; /*This is setting the top padding in the header */
+  top: 0.8rem;
   left: 1.2rem;
   height: 3px;
   position: relative;
@@ -258,8 +253,7 @@ a:hover {
 }
 
 .header .menu-btn:checked ~ .menu {
-  /*max-height: 100vh;*/
-  display: block;
+  max-height: 100vh;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -1647,7 +1641,6 @@ h4 {
     /*border-right: 1px solid #f4f4f4;*/
     text-decoration: none;
     color: white;
-    background-color: red;
   }
 
   .header li a .i {
