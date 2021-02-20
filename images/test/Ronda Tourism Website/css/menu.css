@@ -123,7 +123,8 @@ html {
   display: block;
   color: white;
  /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.125);*/
-  border-top:1px solid #393939;
+ border-top:1px solid #393939;
+
 }
 
 .submenu a {
@@ -234,7 +235,7 @@ padding: 1rem 0.5rem ;
 }
 
 .language img{
-  width:1.8rem;
+  width:25px;
   vertical-align:middle;
 }
 
@@ -250,6 +251,17 @@ padding: 1rem 0.5rem ;
 
 
   }
+
+  #menu li,
+#toggle-menu,
+#menu a {
+  position: relative;
+  display: block;
+  color: white;
+ /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.125);*/
+ border-top:0px;
+
+}
 
   #toggle-menu,
 #menu a {
@@ -381,13 +393,16 @@ vertical-align:middle; }
 .language a img{
   vertical-align:middle;
   margin-left:1rem;
-  padding-top:0.3rem;
+  padding-top:0.2rem;
+  width:30px;
+
 
 }
 
 .language-text{
   display:none;
 }
+
 
 
 }
