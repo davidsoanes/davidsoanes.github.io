@@ -76,6 +76,10 @@ a:hover {
   margin-top: -0.3rem;
 }
 
+.logo {
+  display: none;
+}
+
 /*
 .header .logo img {
   width: 50%;

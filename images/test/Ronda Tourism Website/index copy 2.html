@@ -6,6 +6,10 @@
         <link rel="stylesheet" href="css/lightbox.min.css">-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" type="image/png" href="images/icon.png">
+        <script src="js/lightbox-plus-jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <script type="text/javascript" src="js/javascript.js"></script>
         <link rel="stylesheet" href="css/menu.css">
 
         <meta name="viewport" content="width=device-width">
@@ -14,128 +18,78 @@
         <title>Discover Ronda</title>
         <meta name="description" content="Discover Ronda - A place to discover Ronda.">
   </head>
-<div class="container">
 
+ <!--  <script>
+        if (screen.width <= 1024)
 
-      
-	<nav id="menu">
+        function toggleMenu() {
+  var x = document.getElementById("menu-dropdown-submenu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+   </script>-->
 
-  <label for="tm" id="toggle-menu" style="font-family:Georgia;font-size:1rem;">Discover Ronda    
+<!--new header-->
+
+<div class = "container">
+    <header class="header">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn">
+        <span class="navicon"></span>
+      </label>
+      <!--<a href="index.html" class="logo"><img src="./images/logo.jpg">Discover Ronda</a>-->
+      <ul class="menu"> 
+        <div class="menu-dropdown">
+            <div>
+            <li><a>About Ronda<span class="mobile-drop-icon"> ▾</span></a></li>
+            <div  id="menu-dropdown-submenu">  
+                <a href="history.html">History</a>
+                <a href="ronda-today.html">Ronda Today</a>
+                <a href="famous-people.html">Famous People</a>
+                <a href="regional-food.html">Regional Food</a>
+            </div>
+        </div>
+    </div>
     
-    
-    <span class="drop-icon" style=color:white;>☰
- 
-    </span>   
-    
-
-  
-<!--
-    <input class="menu-btn" type="checkbox" id="menu-btn" />
-    <label class="menu-icon" for="menu-btn">
-      <span class="navicon"></span>
-    </label>    
-
-  -->
-
-  </label>
-  <input type="checkbox" id="tm">
-  <ul class="main-menu cf">
-    <li class="logo"><a href="index.html">Discover Ronda</a></li>
-    <li><a href="#">About Ronda
-        <span class="drop-icon">▾</span>
-        <label title="Toggle Drop-down" class="drop-icon" for="sm0">▾
-        </label>
-      </a>
-      <input type="checkbox" id="sm0">
-      <ul class="sub-menu">
-        <li><a href="history.html">History</a></li>
-        <li><a href="ronda-today.html">Ronda Today</a></li>
-        <li><a href="famous-people.html">Famous People</a></li>
-        <li><a href="regional-food.html">Regional Food</a></li>
-      </ul>
-    </li>
-    <li><a href="#">See & Do
-      <span class="drop-icon">▾</span>
-      <label title="Toggle Drop-down" class="drop-icon" for="sm1">▾</label>
-    </a>
-    <input type="checkbox" id="sm1">
-    <ul class="sub-menu">
-      <li><a href="sightseeing.html">Sightseeing</a></li>
-      <li>  <a href="culture.html">Culture/Museums</a></li>
-      <li>  <a href="hiking.html">Nature/Hiking</a></li>
-    </ul>
-  </li>
-  <li><a href="#">Image Gallery
-    <span class="drop-icon">▾</span>
-    <label title="Toggle Drop-down" class="drop-icon" for="sm2">▾</label>
-  </a>
-  <input type="checkbox" id="sm2">
-  <ul class="sub-menu">
-    <li>  <a href="ronda-gallery.html">Ronda</a></li>
-    <li> <a href="serrania-gallery.html">Serrania</a></li>
-    <li> <a href="andalucia-gallery.html">Andalucía</a></li>
-  </ul>
-</li>
-<li><a href="plan-your-trip.html">Plan Your Trip</a></li>
-<li><a href="#">About Us
-  <span class="drop-icon">▾</span>
-  <label title="Toggle Drop-down" class="drop-icon" for="sm3">▾</label>
-</a>
-<input type="checkbox" id="sm3">
-<ul class="sub-menu">
-  <li> <a href="who-we-are.html">Who We Are</a></li>
-  <li> <a href="support-us.html">Support Us</a></li>
-
-</ul>
-<li class="addon"><div class="instagram">
-  <a href="https://www.instagram.com/discover.ronda/" target="_blank" i class="fa fa-instagram " aria-hidden="true" ></a>
-  </div></li>
-  <li class="addon"><div class="language">
-    <a href="es/index.html" target="" i class="" aria-hidden="true"><span class="language-text">Cambiar Idioma:</span><img src="images/spanish-language.png" ></a>
-    </div></li>
-</li>
-  </ul>
-</nav>	        
-
-
-<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-10703354-8', 'w3bits.com');ga('require', 'displayfeatures');ga('send', 'pageview');</script><script type='text/javascript' src='https://w3bits.com/wp-content/themes/w/assets/js/prettify.js'></script>
-<script type='text/javascript'>
-prettyPrint()
-</script>
-
-<script>
-  var script = function(src) {
-      var e = document.createElement('script');
-      e.async = true;
-      e.src = src;
-      document.getElementsByTagName('head')[0].appendChild(e);
-  };
-  
-</script>
-
-
-
-
-
-
-
-<!--
-<div class="instagram">
-  <a href="https://www.instagram.com/discover.ronda/" target="_blank" i class="fa fa-instagram " aria-hidden="true"></a>
-  </div>
-</ul>
+        <div class="menu-dropdown">
+<li onclick="toggleMenu()"><a>See & Do<span class="mobile-drop-icon"> ▾</span></a></li>
+            <div id="menu-dropdown-submenu">  
+                <a href="sightseeing.html">Sightseeing</a>
+              <a href="culture.html">Culture/Museums</a>
+              <a href="hiking.html">Nature/Hiking</a>
+            </div>
+          </div>
+        <div class="menu-dropdown">
+       <li onclick="toggleMenu()"><a>Image Gallery<span class="mobile-drop-icon"> ▾</span></a></li>    
+       <div  id="menu-dropdown-submenu">  
+        <a href="ronda-gallery.html">Ronda</a>
+              <a href="serrania-gallery.html">Serrania</a>
+              <a href="andalucia-gallery.html">Andalucía</a>
+            </div>
+          </div>
+          <div class="menu-dropdown">
+            <li><a href="plan-your-trip.html">Plan Your Trip</a></li>
+          </div>
+          <div class="menu-dropdown">
+            <li onclick="toggleMenu()"><a>About Us<span class="mobile-drop-icon"> ▾</span></a></li>
+            <div  id="menu-dropdown-submenu">  
+                <a href="who-we-are.html">Who We Are</a>
+              <a href="support-us.html">Support Us</a>
+            </div>
+          </div>
+          <div class="instagram">
+            <a href="https://www.instagram.com/discover.ronda/" target="_blank" i class="fa fa-instagram " aria-hidden="true"></a>
+            </div>
+        </ul>
 <div class="language">
-<a href="es/index.html" target="" i class="" aria-hidden="true"><img src="images/spanish-language.png" width="25rem"></a>
+        <a href="es/index.html" target="" i class="" aria-hidden="true"><img src="images/spanish-language.png" width="25rem"></a>
+        </div>
+  </header>
 </div>
-<li><a href="index.html" class="logo"><img src="./images/logo.jpg">Discover Ronda</a></li>
--->
 
-
-
-  <!--</header>
-</div>
--->
 <!--
     <section id = "homepage-banner">
         <div class = "container">

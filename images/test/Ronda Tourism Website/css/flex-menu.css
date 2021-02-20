@@ -206,60 +206,25 @@ html {
 }
 */
 
-#menu .addon{
-display:block;
-padding: 0;
-}
-#menu .addon a{
-padding: 1rem 0.5rem ;
-
- }
-
-.instagram{
-  font-size:1rem;
-  padding:0rem;
-  padding-left:1rem;
-  text-align:left;
-
-}
-
 .language-text{
-  display:inline;
-  padding-right:1rem;
+  display:block;
 }
-
-.language {
-  text-align:center;
-
-}
-
-.language img{
-  width:1.8rem;
-  vertical-align:middle;
-}
-
-
-
-
 
 @media only screen and (min-width: 1024px) {
   #menu .main-menu {
-    display: flex;
+    display: inline-block;
     justify-content:center;
     flex-direction: row;
 
 
   }
 
-  #toggle-menu,
-#menu a {
-  padding: 1em 0em;
-}
 
 /*
   #menu .main-menu #logo{
         display:block;
-
+font-family:Georgia, 'Times New Roman', Times, serif;
+text-transform:uppercase;
 flex-grow: 2; 
 
   }
@@ -268,18 +233,9 @@ flex-grow: 2;
 
 #menu .main-menu .logo{
   display:block;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-text-transform:uppercase;
 }
 
-#menu .main-menu .logo a{
-  text-align:left;
-  padding-left:1rem;
-}
 
-#menu a{
-  text-align:center;
-}
   #menu a:hover {
     background-color: #3c3c3c;
     color: white;
@@ -294,36 +250,45 @@ text-transform:uppercase;
     display: inline-block;
   }
 
+  #menu ul{
+
+  }
+
+  li:first-child {
+    flex-grow:10;
+  
+  }
+
   #menu li {
-    float:center;
+    
+/*
+    margin-right: auto; 
+    margin-left: auto; 
+*/
+
   }
 
   #menu .logo{
-    
-    flex:3;
+    /*
+    flex-grow:3;*/
   }
 
-  #menu li{
-    flex:2;
+  #menu li{/*
+    flex:2;*/
   }
 
-  #menu .addon{
+  #menu .addon{/*
     flex: 1;
     justify-content: right;
-float:right; 
-padding: 0;
-padding-top:1.1rem;
-vertical-align:middle; }
+float:right; */ }
 
-#menu .main-menu .addon a{
-  text-align:right;
-  padding-right:1rem;
-}
 
 
   #menu .sub-menu li {
     float: none;
   }
+
+
 
   #menu .sub-menu {
     background-color: #333;
@@ -362,26 +327,28 @@ vertical-align:middle; }
     display: block;
   }
 
-.instagram{
+.language{
+  /*
+  text-align:center;
+  position:fixed;
+  float:right;
+  */
   margin-left: auto; /* Aligns flex item to left */
-  font-size:1rem;
-  padding:0rem;
 }
 
-.instagram a {
-  font-size:1.5rem;
-  padding:0rem;
-}
-
-#toggle-menu,
-#menu .addon a {
-  padding: 0;
+.instagram{
+  /*
+  vertical-align:top;
+  padding-left:10rem;
+  float:right;
+  position:fixed;
+  */
+  margin-left: auto; /* Aligns flex item to left */
 }
 
 .language a img{
   vertical-align:middle;
   margin-left:1rem;
-  padding-top:0.3rem;
 
 }
 
