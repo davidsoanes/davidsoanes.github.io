@@ -144,10 +144,12 @@ html {
   padding: 1em 1.5em;
 }
 
+/* Removed fade in of mobile menu items
 #menu a {
   transition: all 0.125s ease-in-out;
   -webkit-transition: all 0.125s ease-in-out;
 }
+*/
 
 #menu a:hover {
   background-color: #3c3c3c;
@@ -157,6 +159,7 @@ html {
 #menu .sub-menu {
   display: none;
 }
+
 
 #menu input[type="checkbox"]:checked + .sub-menu {
   display: block;

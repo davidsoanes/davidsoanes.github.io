@@ -209,33 +209,33 @@ a:hover {
 /*Mobile Menu Styling */
 
 /* menu */
-.menu {
+.header .menu {
   display: none;
 }
 
 /* menu icon */
-.menu-icon {
+.header .menu-icon {
   cursor: pointer;
-  text-align: right;
+  text-align: left;
   padding-left: 1rem;
   user-select: none;
   vertical-align: center;
 }
 
 /* Hamburger menu */
-.menu-icon .navicon {
+.header .menu-icon .navicon {
   background: white;
   display: block;
-  top: -1rem; /*This is setting the top padding in the header */
-  left: 14rem;
+  top: 0.8rem; /*This is setting the top padding in the header */
+  left: 1.2rem;
   height: 3px;
   position: relative;
   width: 22px;
   z-index: 1000;
 }
 
-.menu-icon .navicon:before,
-.menu-icon .navicon:after {
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
   background: white;
   content: "";
   display: block;
@@ -245,37 +245,37 @@ a:hover {
   width: 100%;
 }
 
-.menu-icon .navicon:before {
+.header .menu-icon .navicon:before {
   top: 6px;
 }
 
-.menu-icon .navicon:after {
+.header .menu-icon .navicon:after {
   top: -6px;
 }
 
-.menu-btn {
+.header .menu-btn {
   display: none;
 }
 
-.menu-btn:checked ~ .menu {
+.header .menu-btn:checked ~ .menu {
   /*max-height: 100vh;*/
   display: block;
 }
 
-.menu-btn:checked ~ .menu-icon .navicon {
+.header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
 
-.menu-btn:checked ~ .menu-icon .navicon:before {
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.menu-btn:checked ~ .menu-icon .navicon:after {
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
