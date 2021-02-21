@@ -14,6 +14,28 @@
         <title>Discover Ronda</title>
         <meta name="description" content="Discover Ronda - A place to discover Ronda.">
   </head>
+
+<style>
+  #menu .sub-menu:not(.open) {
+  display: none;
+}
+</style>
+  <script>
+function open(item) {
+    if (!item.classList.contains("open")) {
+        //Hide whatever was opened
+        for (let it of document.querySelectorAll(#menu .sub-menu.open)) {
+            it.classList.remove("open")
+        }
+        item.classList.add("open");
+    } else {
+        item.classList.remove("open");
+    }
+}
+  </script>
+
+
+
 <div class="container">
 
 
@@ -87,13 +109,15 @@
   <li> <a href="support-us.html">Support Us</a></li>
 
 </ul>
+<span class="addon-section">
 <li class="addon"><div class="instagram">
-  <a href="https://www.instagram.com/discover.ronda/" target="_blank" i class="fa fa-instagram " aria-hidden="true" ></a>
+  <a id="addon" href="https://www.instagram.com/discover.ronda/" target="_blank"><img src="images/instagram-icon.png" ></a>
   </div></li>
   <li class="addon"><div class="language">
-    <a href="es/index.html" target="" i class="" aria-hidden="true"><span class="language-text">Cambiar Idioma:</span><img src="images/spanish-language.png" ></a>
+    <a id="addon" href="es/index.html" target="" i class="" aria-hidden="true"><span class="language-text">Cambiar Idioma:</span><img src="images/spanish-language.png" ></a>
     </div></li>
 </li>
+</span>
   </ul>
 </nav>	        
 

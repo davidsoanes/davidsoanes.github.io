@@ -127,6 +127,8 @@ html {
 
 }
 
+
+
 .submenu a {
   color: #aeaeae;
 }
@@ -156,13 +158,23 @@ html {
   color: white;
 }
 
+#menu .logo a:hover {
+  background-color: #333;
+  color: white;
+}
+
+#menu .addon a:hover {
+  background-color: #333;
+  color: white;
+}
+
 #menu .sub-menu {
-  display: none;
+  display: block;
   
 }
 
 
-#menu input[type="checkbox"]:checked + .sub-menu {
+#menu input[type="checkbox"]:checked + .sub-menu { /* this activates the sub menu */
   display: block;
 }
 
@@ -178,9 +190,17 @@ html {
   top: 0;
 }
 
-#menu label.drop-icon,
-#toggle-menu span.drop-icon {
+#menu label.drop-icon {
   padding: 1em;
+  font-size: 1em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.125);
+  text-shadow: 0 0 0 transparent;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+#toggle-menu span.drop-icon {
+  padding: 1em 1em 1em 0.7em;
   font-size: 1em;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.125);
@@ -208,12 +228,16 @@ html {
 */
 
 #menu .addon{
-display:block;
+display:inline;
 padding: 0;
 }
 #menu .addon a{
 padding: 1rem 0.5rem ;
 
+ }
+
+ .addon-section{
+   display:inline;
  }
 
 .instagram{
@@ -222,6 +246,10 @@ padding: 1rem 0.5rem ;
   padding-left:1rem;
   text-align:left;
 
+}
+
+.instagram img{
+  width:10%;
 }
 
 .language-text{
@@ -376,7 +404,7 @@ vertical-align:middle; }
 
 .instagram{
   margin-left: auto; /* Aligns flex item to left */
-  font-size:1rem;
+  font-size:rem;
   padding:0rem;
 }
 
@@ -384,6 +412,11 @@ vertical-align:middle; }
   font-size:1.5rem;
   padding:0rem;
 }
+
+.addon .instagram img{
+width:30%}
+
+
 
 #toggle-menu,
 #menu .addon a {
