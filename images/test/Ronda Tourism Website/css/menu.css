@@ -94,11 +94,6 @@ html {
 #menu .sub-menu {
   /*border-style: solid; This put the strange border around the menu items */
   border-color: rgba(0, 0, 0, 0.05);
-
-  }
-
-
-
 }
 
 #menu li,
@@ -122,12 +117,9 @@ html {
   position: relative;
   display: block;
   color: white;
- /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.125);*/
- border-top:1px solid #393939;
-
+  /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.125);*/
+  border-top: 1px solid #393939;
 }
-
-
 
 .submenu a {
   color: #aeaeae;
@@ -170,11 +162,10 @@ html {
 
 #menu .sub-menu {
   display: block;
-  
 }
 
-
-#menu input[type="checkbox"]:checked + .sub-menu { /* this activates the sub menu */
+#menu input[type="checkbox"]:checked + .sub-menu {
+  /* this activates the sub menu */
   display: block;
 }
 
@@ -203,13 +194,13 @@ html {
   padding: 1em 1em 1em 0.7em;
   font-size: 1em;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.125);
+  background-color: #333;
   text-shadow: 0 0 0 transparent;
   color: rgba(255, 255, 255, 0.75);
 }
 
-#menu .main-menu .logo{
-  display:none;
+#menu .main-menu .logo {
+  display: none;
 }
 /*
 .instagram{
@@ -227,76 +218,72 @@ html {
 }
 */
 
-#menu .addon{
-display:inline;
-padding: 0;
+#menu .addon {
+  display: inline;
+  padding: 0;
+  pointer-events: none;
 }
-#menu .addon a{
-padding: 1rem 0.5rem ;
-
- }
-
- .addon-section{
-   display:inline;
- }
-
-.instagram{
-  font-size:1rem;
-  padding:0rem;
-  padding-left:1rem;
-  text-align:left;
-
+#menu .addon a {
+  padding: 1rem 0.5rem;
 }
 
-.instagram img{
-  width:10%;
+#menu .addon img {
+  pointer-events: auto;
 }
 
-.language-text{
-  display:inline;
-  padding-right:1rem;
+.addon-section {
+  display: inline;
+}
+
+.instagram {
+  font-size: 1rem;
+  padding: 0rem;
+  padding-left: 1rem;
+  text-align: left;
+}
+
+.instagram img {
+  width: 10%;
+}
+
+.language-text {
+  display: inline;
+  padding-right: 1rem;
 }
 
 .language {
-  text-align:center;
-
+  text-align: center;
+  font-size: 0.8rem;
 }
 
-.language img{
-  width:25px;
-  vertical-align:middle;
+.language img {
+  width: 25px;
+  vertical-align: middle;
 }
-
-
-
-
 
 @media only screen and (min-width: 1024px) {
   #menu .main-menu {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     flex-direction: row;
-
-
   }
 
   #menu li,
-#toggle-menu,
-#menu a {
-  position: relative;
-  display: block;
-  color: white;
- /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.125);*/
- border-top:0px;
-
-}
+  #toggle-menu,
+  #menu a {
+    position: relative;
+    display: block;
+    color: white;
+    /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.125);*/
+    border-top: 0px;
+  }
 
   #toggle-menu,
-#menu a {
-  padding: 1em 0em;
-}
+  #menu a {
+    padding: 1em 0em;
+  }
 
-/*
+  /*
   #menu .main-menu #logo{
         display:block;
 
@@ -305,21 +292,25 @@ flex-grow: 2;
   }
  */
 
+  #menu .main-menu .logo {
+    display: block;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
 
-#menu .main-menu .logo{
-  display:block;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-text-transform:uppercase;
-}
+  #menu .main-menu .logo #logo-text {
+    pointer-events: auto;
+  }
 
-#menu .main-menu .logo a{
-  text-align:left;
-  padding-left:1rem;
-}
+  #menu .main-menu .logo a {
+    text-align: left;
+    padding-left: 1rem;
+  }
 
-#menu a{
-  text-align:center;
-}
+  #menu a {
+    text-align: center;
+  }
   #menu a:hover {
     background-color: #3c3c3c;
     color: white;
@@ -335,31 +326,35 @@ text-transform:uppercase;
   }
 
   #menu li {
-    float:center;
+    float: center;
   }
 
-  #menu .logo{
-    
-    flex:3;
+  #menu .logo {
+    flex: 3;
   }
 
-  #menu li{
-    flex:2;
+  #menu li {
+    flex: 2;
   }
 
-  #menu .addon{
+  #menu .addon {
     flex: 1;
     justify-content: right;
-float:right; 
-padding: 0;
-padding-top:1.1rem;
-vertical-align:middle; }
+    float: right;
+    padding: 0;
+    padding-top: 1.1rem;
+    vertical-align: middle;
+    pointer-events: none;
+  }
 
-#menu .main-menu .addon a{
-  text-align:right;
-  padding-right:1rem;
-}
+  #menu .addon img {
+    pointer-events: auto;
+  }
 
+  #menu .main-menu .addon a {
+    text-align: right;
+    padding-right: 1rem;
+  }
 
   #menu .sub-menu li {
     float: none;
@@ -402,40 +397,34 @@ vertical-align:middle; }
     display: block;
   }
 
-.instagram{
-  margin-left: auto; /* Aligns flex item to left */
-  font-size:rem;
-  padding:0rem;
-}
+  .instagram {
+    margin-left: auto; /* Aligns flex item to left */
+    font-size: rem;
+    padding: 0rem;
+  }
 
-.instagram a {
-  font-size:1.5rem;
-  padding:0rem;
-}
+  .instagram a {
+    font-size: 1.5rem;
+    padding: 0rem;
+  }
 
-.addon .instagram img{
-width:30%}
+  .addon .instagram img {
+    width: 30%;
+  }
 
+  #toggle-menu,
+  #menu .addon a {
+    padding: 0;
+  }
 
+  .language a img {
+    vertical-align: middle;
+    margin-left: 1rem;
+    padding-top: 0.2rem;
+    width: 30px;
+  }
 
-#toggle-menu,
-#menu .addon a {
-  padding: 0;
-}
-
-.language a img{
-  vertical-align:middle;
-  margin-left:1rem;
-  padding-top:0.2rem;
-  width:30px;
-
-
-}
-
-.language-text{
-  display:none;
-}
-
-
-
+  .language-text {
+    display: none;
+  }
 }
