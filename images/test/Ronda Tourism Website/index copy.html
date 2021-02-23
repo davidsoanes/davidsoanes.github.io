@@ -4,20 +4,49 @@
         <link rel="stylesheet" href="css/stylesheet.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" type="image/png" href="images/icon.png">
-        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-10703354-8', 'w3bits.com');ga('require', 'displayfeatures');ga('send', 'pageview');</script><script type='text/javascript' src='https://w3bits.com/wp-content/themes/w/assets/js/prettify.js'></script>
+        <head>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          </head>
         <link rel="stylesheet" href="css/menu.css">
         <meta name="viewport" content="width=device-width">
         <script src="https://use.fontawesome.com/af14fb55aa.js"></script>
+
         <title>Discover Ronda</title>
         <meta name="description" content="Discover Ronda - A place to discover Ronda.">
   </head>
+
   <body>
+
+    <script>
+   if (screen.width < 960) {
+
+      $(document).ready(function () {
+        var li = $(".main-menu>li", this).has(".sub-menu");
+        $(">a", li).click(function (e) {
+          e.preventDefault();
+          $(".sub-menu").hide();
+          $(e.target).next().show();
+        });
+      });
+   }
+
+  
+
+
+    </script>
+
+
+    <style>
+      .sub-menu {
+        display: none;
+      }
+    </style>
 
 <div class="container">    
 	<nav id="menu">
-  <label for="tm" id="toggle-menu">
-    <a class="logo-mobile" href="index.html"><span id="logo-text">Discover Ronda</span></a>   
-    <span class="hamburger"><span class="drop-icon" style=color:white;>☰</span></span>
+  <label for="tm" id="toggle-menu" style="font-family:Georgia;font-size:1rem;">Discover Ronda     
+    <span class="drop-icon" style=color:white;>☰
+    </span>   
   </label>
   <input type="checkbox" id="tm">
   <ul class="main-menu">
@@ -28,6 +57,7 @@
         </label>
       </a>
       <input type="checkbox" id="menu1">
+
       <ul class="sub-menu">
         <li><a href="history.html">History</a></li>
         <li><a href="ronda-today.html">Ronda Today</a></li>
@@ -39,7 +69,6 @@
       <span class="drop-icon">▾</span>
       <label title="Toggle Drop-down" class="drop-icon" for="menu2">▾</label>
     </a>
-    <input type="checkbox" id="menu2">
     <ul class="sub-menu">
       <li><a href="sightseeing.html">Sightseeing</a></li>
       <li>  <a href="culture.html">Culture/Museums</a></li>
@@ -50,7 +79,6 @@
     <span class="drop-icon">▾</span>
     <label title="Toggle Drop-down" class="drop-icon" for="menu3">▾</label>
   </a>
-  <input type="checkbox" id="menu3">
   <ul class="sub-menu">
     <li>  <a href="ronda-gallery.html">Ronda</a></li>
     <li> <a href="serrania-gallery.html">Serrania</a></li>
@@ -62,7 +90,6 @@
   <span class="drop-icon">▾</span>
   <label title="Toggle Drop-down" class="drop-icon" for="menu4">▾</label>
 </a>
-<input type="checkbox" id="menu4">
 <ul class="sub-menu">
   <li> <a href="who-we-are.html">Who We Are</a></li>
   <li> <a href="support-us.html">Support Us</a></li>
@@ -80,7 +107,44 @@
   </ul>
 </nav>	        
 </div>
+
+
+
+<!--
+<script>
+  function open(item) {
+      if (!item.classList.contains("open")) {
+          //Hide whatever was opened
+          for (let it of document.querySelectorAll(.menu .sub-menu.open)) {
+              it.classList.remove("open")
+          }
+          item.classList.add("open");
+      } else {
+          item.classList.remove("open");
+      }
+  }
+    </script>
+
+  -->
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-10703354-8', 'w3bits.com');ga('require', 'displayfeatures');ga('send', 'pageview');</script><script type='text/javascript' src='https://w3bits.com/wp-content/themes/w/assets/js/prettify.js'></script>
+<script type='text/javascript'>
+prettyPrint()
+</script>
+
+<script>
+  var script = function(src) {
+      var e = document.createElement('script');
+      e.async = true;
+      e.src = src;
+      document.getElementsByTagName('head')[0].appendChild(e);
+  };
+</script>
 </div>
+
+
 
 <div class="slideshow-container">
   <div class="mySlides fade">
@@ -121,40 +185,8 @@
   
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
   </div>
-
-  <script>
-
-    //Image slider
-    
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-         // dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-     // dots[slideIndex-1].className += " active";
-    }
-    </script>
-    
   
 
   
@@ -169,19 +201,9 @@
         <div class="feature-item-right"><img src="./images/ronda/ronda_21.jpg"><div class="centered-text">Hiking Routes around Ronda<hr></div></div>
     </div>
 
-    <div class = "container">
-      <h4>Popular Attractions</h4>
-    </div>
-    <div class="feature-container">
-    <div class="feature-item-left"><img src="./images/ronda/ronda_17.jpg"><div class="centered-text">Best Viewpoints in Ronda<hr></div></div>
-    <div class="feature-item-center"><img src="./images/ronda/ronda_14.jpg"><div class="centered-text">1-Day Itinerary<hr></div></div>
-    <div class="feature-item-right"><img src="./images/ronda/ronda_15.jpg"><div class="centered-text">Weekend Trip<hr></div></div>
-    </div>
-
 
 
     <div class="homepage-parallax-banner-1">
-      
       <div class="centered-text-header">
         Highlights
       </div>
@@ -192,6 +214,16 @@
         </div>
     </div>
     
+
+<div class = "container">
+  <h4>Popular Attractions</h4>
+</div>
+
+<div class="feature-container">
+<div class="feature-item-left"><img src="./images/ronda/ronda_17.jpg"><div class="centered-text">Best Viewpoints in Ronda<hr></div></div>
+<div class="feature-item-center"><img src="./images/ronda/ronda_14.jpg"><div class="centered-text">1-Day Itinerary<hr></div></div>
+<div class="feature-item-right"><img src="./images/ronda/ronda_15.jpg"><div class="centered-text">Weekend Trip<hr></div></div>
+</div>
 
 <div class="homepage-flex-container">
   <div class="homepage-flex-item-left">
@@ -221,14 +253,18 @@
 <div class="feature-item-right"><img src="./images/ronda/ronda_24.jpg"><div class="centered-text">Weekend Trip<hr></div></div>
 </div>
 
+
+
+
+
+
+
+
 <div id = "footer">
     <div id="footer-text">
         <p>Copyright &copy 2021 David Soanes<br>
     </div>
 </div>
-
-</body>
-</html>
 
 
 <!--
@@ -294,25 +330,37 @@ function fadeDivs() {
 
 -->
 
-<!--
 <script>
-  var script = function(src) {
-      var e = document.createElement('script');
-      e.async = true;
-      e.src = src;
-      document.getElementsByTagName('head')[0].appendChild(e);
-  };
+
+//Homepage image slider
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     // dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+ // dots[slideIndex-1].className += " active";
+}
 </script>
--->
 
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-    <script>
-      $(".main-menu > li > a").click(function () {
-        $("ul.sub-menu").not($(this).siblings()).slideUp();
-        $(this).siblings("ul.sub-menu").slideToggle();
-      });
-    </script>
--->
-
+</body>
+</html>

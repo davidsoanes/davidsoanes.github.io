@@ -2,6 +2,11 @@ body {
   line-height: 1.618;
 }
 
+/* Stops all mobile sub menus from opening by default */
+#menu .sub-menu:not(.open) {
+  display: none;
+}
+
 ol,
 ul {
   list-style: none;
@@ -119,6 +124,7 @@ html {
   color: white;
   /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.125);*/
   border-top: 1px solid #393939;
+  margin-left: 0.5rem;
 }
 
 .submenu a {
@@ -138,17 +144,22 @@ html {
   padding: 1em 1.5em;
 }
 
+#toggle-menu,
+#menu .logo-text a {
+  padding: 0;
+  margin-left: 0;
+}
+
+.hamburger {
+  margin-left: 3rem;
+}
+
 /* Removed fade in of mobile menu items
 #menu a {
   transition: all 0.125s ease-in-out;
   -webkit-transition: all 0.125s ease-in-out;
 }
 */
-
-#menu a:hover {
-  background-color: #3c3c3c;
-  color: white;
-}
 
 #menu .logo a:hover {
   background-color: #333;
@@ -261,11 +272,43 @@ html {
   vertical-align: middle;
 }
 
+#menu .main-menu .logo-mobile {
+  display: block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+#menu .main-menu .logo-mobile #logo-text {
+  pointer-events: auto;
+}
+
+#toggle-menu {
+  display: block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+#toggle-menu #logo-text {
+  pointer-events: auto;
+}
+
+#toggle-menu .hamburger {
+  pointer-events: auto;
+}
+
 @media only screen and (min-width: 1024px) {
   #menu .main-menu {
     display: flex;
     justify-content: center;
     flex-direction: row;
+  }
+
+  #menu li,
+  #toggle-menu,
+  #menu a {
+    margin-left: 0rem;
   }
 
   #menu li,
