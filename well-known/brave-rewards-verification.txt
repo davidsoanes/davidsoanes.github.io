@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: davidsoanes.com
+Token: ae243b51bfbf96734489c91d834923ad78c7c76ed714a71aec1087763c234ff2
